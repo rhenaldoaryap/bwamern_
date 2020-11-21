@@ -60,6 +60,3 @@ const Testimony = ({ data }) => {
 };
 
 export default Testimony;
-
-//align-item-center akan meletakkan apapun itu ke tengah secara horizontal
-//col-6 untuk mempunyai lebar sebanyak 6 kolom
