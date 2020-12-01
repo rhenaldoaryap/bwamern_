@@ -15,8 +15,6 @@ import BookingInformation from "parts/Checkout/BookingInformation";
 import Payment from "parts/Checkout/Payment";
 import Completed from "parts/Checkout/Completed";
 
-import itemDetails from "json/itemDetails.json";
-
 import { submitBooking } from "store/actions/checkout";
 
 class Checkout extends Component {
