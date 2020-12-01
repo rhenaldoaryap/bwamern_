@@ -6,7 +6,7 @@ import propTypes from "prop-types";
 
 import "./index.scss";
 
-const Numbering = ({ style, className, data, current }) => {
+export default function Numbering({ style, className, data, current }) {
   const KeysOfData = Object.keys(data);
   return (
     <Fade>
@@ -27,9 +27,7 @@ const Numbering = ({ style, className, data, current }) => {
       </ol>
     </Fade>
   );
-};
-
-export default Numbering;
+}
 
 Numbering.propTypes = {
   className: propTypes.string,

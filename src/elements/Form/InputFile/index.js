@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import propTypes from "prop-types";
 
 import "./index.scss";
 
 const File = (props) => {
+  const [fileName, setfileName] = useState("");
   const {
     value,
     placeholder,
@@ -16,6 +17,16 @@ const File = (props) => {
   } = props;
 
   const refInputFile = useRef(null);
+
+  const onChange = (event) => {
+    setfileName(event.target.value);
+    props.onChange({
+      target: {
+        name: event.target.name,
+        value: event.target.files,
+      },
+    });
+  };
 
   return (
     <div className={["input-text mb-3", outerClassName].join(" ")}>
@@ -31,12 +42,12 @@ const File = (props) => {
           name={name}
           className="d-none" //untuk menyembunyikan agar tidak terlihat oleh DOM, tetapi sebenarnya ada
           type="file"
-          value={value}
-          onChange={props.onChange}
+          value={fileName}
+          onChange={onChange}
         />
         <input //ini adalah masking yang akan muncul dihalaman depan atau yang akan dilihat oleh orang/user
           onClick={() => refInputFile.current.click()}
-          defaultValue={value}
+          defaultValue={fileName}
           placeholder={placeholder}
           className={["form-control", inputClassName].join(" ")}
         />

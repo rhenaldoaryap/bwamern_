@@ -1,13 +1,14 @@
 {
+  "idItem": "ObjectID()",
   "duration": "2",
   "price": "240",
-  "bookingDateStart": "new Date()",
-  "bookingDateEnd": "new Date()",
-  "firstName": "Angga",
-  "lastName": "Risky",
-  "emailAddress": "angga@buildwithangga.com",
-  "phoneNumber": "081923012380",
-  "accountHolder": "Angga Risky",
+  "bookingStartDate": "new Date()",
+  "bookingEndDate": "new Date()",
+  "firstName": "Rhe",
+  "lastName": "Dev",
+  "emailAddress": "rhenaldoaryap@gmail.com",
+  "phoneNumber": "081388395289",
+  "accountHolder": "Rhenaldo Arya Pangestu",
   "bankFrom": "BCA",
   "proofPayment": "FileData()"
 }

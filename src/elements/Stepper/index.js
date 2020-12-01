@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import propTypes from "prop-types";
 
-const Stepper = (props) => {
+export default function Stepper(props) {
   const { steps, initialStep } = props;
   const stepKeys = Object.keys(steps);
 
@@ -21,9 +21,7 @@ const Stepper = (props) => {
   }
 
   return <>{props.children(prevStep, nextStep, CurrentStep, steps)}</>;
-};
-
-export default Stepper;
+}
 
 Stepper.propTypes = {
   data: propTypes.object.isRequired,
